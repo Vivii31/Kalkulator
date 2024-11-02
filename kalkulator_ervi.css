@@ -1,0 +1,71 @@
+body{
+    background: rgb(177, 119, 204);
+    color: white (250, 247, 247);
+    font-size: 9px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    /* border: solid 1px white; */
+}
+
+#kalkulator{
+    border: solid 1px rgb(247, 217, 214) ;
+    padding: 10px;
+    background: url(galaxy3.jpg);
+    color: rgb(221, 217, 224); 
+    min-width: 200px;
+}
+.wrapper{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.wrapper div{
+    width: 100%;
+    /* background: rgb(247, 217, 214); */
+    padding: 5px 10px;
+}
+
+#hasil,#btn-hitung{
+    font-size: 22px;
+}
+
+#operasi-temporer{
+    font-size: 9px;
+}
+
+.bg-abu{background: #a282af;}
+.bg-red{background-color: rgb(192, 139, 185);}
+.bg-dark-brown{background: rgb(128, 89, 89);}
+.bg-brown{background: rgb(179, 108, 108);}
+.bg-dark-blue{background: rgb(85, 85, 145);}
+.bg-purple{background: rgb(131, 65, 131);}
+.bg-green{background: rgb(90, 143, 90);}
+
+#judul{
+    padding: 10px 0;
+}
+
+.tombol{
+    border: solid 1px #ccc;
+    box-shadow: 0 0 3px gray;
+}
+
+.tombol-aktif{
+    cursor: pointer;
+    transition: .2s; 
+}
+
+.tombol-aktif:hover{
+    background-color: linear-gradient #fcf, fuchsia;
+    transform: scale(1.1);
+}
+
+.tombol-nonaktif{
+    box-shadow: none !important;
+}
