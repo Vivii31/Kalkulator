@@ -81,11 +81,6 @@ $(".tombol-faktorial").click(function () {
         let hasil = faktorial(input1);
         $("#input1").text(hasil);
         $("#hasil").text(hasil); // tampilkan hasil pada display
-    } else {
-        let input2 = parseInt($("#input2").text());
-        let hasil = faktorial(input2);
-        $("#input2").text(hasil);
-        $("#hasil").text(hasil); // tampilkan hasil pada display
     }
 });
 
