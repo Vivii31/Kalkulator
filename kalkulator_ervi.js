@@ -70,7 +70,7 @@ $(function () {
           hasil = input1 ** input2;
         } else if (operasiSelected == "%") {
           hasil = input1 % input2;
-        } else if (operand == "!") {
+        } else if (operasiSelected == "!") {
             hasil = faktorial (input1);
           }else {
         alert("Hello jquery kamu menekan angka ${operasiSelected}");
