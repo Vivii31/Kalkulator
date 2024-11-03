@@ -72,13 +72,14 @@ $(function () {
     $("#hasil").text(hasil);
 });
 
-// Fungsi faktorial
 function faktorial(n) {
+    if (n < 0) {
+        return "Tidak ada faktorial untuk angka negatif.";
+    }
     if (n === 0 || n === 1) {
         return 1;
-    } else {
-        return n * faktorial(n - 1);
     }
+    return n * faktorial(n - 1);
 }
 
 
