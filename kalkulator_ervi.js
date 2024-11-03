@@ -50,6 +50,16 @@ $(function () {
       console.log("Clear: " + operasiSelected); // Reset nilai dan menampilkan di console
     });
 
+    function faktorial(n) {
+        if (n < 0) {
+            return "Tidak ada faktorial untuk angka negatif.";
+        }
+        if (n === 0 || n === 1) {
+            return 1;
+        }
+        return n * faktorial(n - 1);
+    }
+    
     $("#btn-hitung").click(function () {
         input1 = parseInt($("#input1").text());
         input2 = parseInt($("#input2").text());
@@ -72,15 +82,7 @@ $(function () {
     $("#hasil").text(hasil);
 });
 
-function faktorial(n) {
-    if (n < 0) {
-        return "Tidak ada faktorial untuk angka negatif.";
-    }
-    if (n === 0 || n === 1) {
-        return 1;
-    }
-    return n * faktorial(n - 1);
-}
+
 
 
 
