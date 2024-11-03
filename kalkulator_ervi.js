@@ -43,7 +43,12 @@ $(function () {
         }
     });
 
-
+    document
+    .querySelector(".tombol-clear")
+    .addEventListener("click", function () {
+      operasiSelected = null;
+      console.log("Clear: " + operasiSelected); // Reset nilai dan menampilkan di console
+    });
     
     $("#btn-hitung").click(function () {
         input1 = parseInt($("#input1").text());
