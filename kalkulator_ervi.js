@@ -43,12 +43,6 @@ $(function () {
         }
     });
 
-    document
-    .querySelector(".tombol-clear")
-    .addEventListener("click", function () {
-      operasiSelected = null;
-      console.log("Clear: " + operasiSelected); // Reset nilai dan menampilkan di console
-    });
 
     function faktorial(n) {
         if (n < 0) {
@@ -59,7 +53,7 @@ $(function () {
         }
         return n * faktorial(n - 1);
     }
-    
+
     $("#btn-hitung").click(function () {
         input1 = parseInt($("#input1").text());
         input2 = parseInt($("#input2").text());
@@ -76,7 +70,9 @@ $(function () {
           hasil = input1 ** input2;
         } else if (operasiSelected == "%") {
           hasil = input1 % input2;
-    } else {
+        } else if (operand == "!") {
+            hasil = faktorial (input1);
+          }else {
         alert("Hello jquery kamu menekan angka ${operasiSelected}");
     }
     $("#hasil").text(hasil);
