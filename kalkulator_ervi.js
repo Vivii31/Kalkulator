@@ -44,8 +44,7 @@ $(function () {
     });
 
 
-
-
+    
     $("#btn-hitung").click(function () {
         input1 = parseInt($("#input1").text());
         input2 = parseInt($("#input2").text());
@@ -66,47 +65,29 @@ $(function () {
         alert("Hello jquery kamu menekan angka ${operasiSelected}");
     }
     $("#hasil").text(hasil);
+    });
+// Fungsi faktorial
+function faktorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * faktorial(n - 1);
+    }
+}
 
-    function appendToDisplay(value) {
-        const display = document.getElementById("display");
-        display.value += value;
-      }
-      
-      function calculate() {
-        const display = document.getElementById("display");
-        try {
-          display.value = eval(display.value);
-        } catch {
-          display.value = "Error";
-        }
-      }
-      
-      function clearDisplay() {
-        const display = document.getElementById("display");
-        display.value = "";
-      }
-      
-      function calculateFactorial() {
-        const display = document.getElementById("display");
-        const number = parseInt(display.value); // Ambil angka dari layar kalkulator
-      
-        if (isNaN(number) || number < 0) {
-          display.value = "Error"; // Cek jika input bukan angka atau negatif
-          return;
-        }
-      
-        display.value = factorial(number); // Hitung faktorial dan tampilkan hasilnya
-      }
-      
-      function factorial(n) {
-        if (n === 0 || n === 1) {
-          return 1;
-        }
-        return n * factorial(n - 1);
-      }
-      
+$(".tombol-faktorial").click(function () {
+    if (operasiSelected === null) {
+        let input1 = parseInt($("#input1").text());
+        let hasil = faktorial(input1);
+        $("#input1").text(hasil);
+        $("#hasil").text(hasil); // tampilkan hasil pada display
+    } else {
+        let input2 = parseInt($("#input2").text());
+        let hasil = faktorial(input2);
+        $("#input2").text(hasil);
+        $("#hasil").text(hasil); // tampilkan hasil pada display
+    }
 });
-
 
 
 
