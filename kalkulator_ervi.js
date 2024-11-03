@@ -44,15 +44,7 @@ $(function () {
     });
 
 
-    function faktorial(n) {
-        if (n < 0) {
-            return "Tidak ada faktorial untuk angka negatif.";
-        }
-        if (n === 0 || n === 1) {
-            return 1;
-        }
-        return n * faktorial(n - 1);
-    }
+
 
     $("#btn-hitung").click(function () {
         input1 = parseInt($("#input1").text());
@@ -70,12 +62,49 @@ $(function () {
           hasil = input1 ** input2;
         } else if (operasiSelected == "%") {
           hasil = input1 % input2;
-        } else if (operasiSelected == "!") {
-            hasil = faktorial (input1);
-          }else {
+        } else {
         alert("Hello jquery kamu menekan angka ${operasiSelected}");
     }
     $("#hasil").text(hasil);
+
+    function appendToDisplay(value) {
+        const display = document.getElementById("display");
+        display.value += value;
+      }
+      
+      function calculate() {
+        const display = document.getElementById("display");
+        try {
+          display.value = eval(display.value);
+        } catch {
+          display.value = "Error";
+        }
+      }
+      
+      function clearDisplay() {
+        const display = document.getElementById("display");
+        display.value = "";
+      }
+      
+      function calculateFactorial() {
+        const display = document.getElementById("display");
+        const number = parseInt(display.value); // Ambil angka dari layar kalkulator
+      
+        if (isNaN(number) || number < 0) {
+          display.value = "Error"; // Cek jika input bukan angka atau negatif
+          return;
+        }
+      
+        display.value = factorial(number); // Hitung faktorial dan tampilkan hasilnya
+      }
+      
+      function factorial(n) {
+        if (n === 0 || n === 1) {
+          return 1;
+        }
+        return n * factorial(n - 1);
+      }
+      
 });
 
 
