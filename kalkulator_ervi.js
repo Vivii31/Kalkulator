@@ -81,18 +81,6 @@ function faktorial(n) {
     }
 }
 
-$(".tombol-faktorial").click(function () {
-    if (operasiSelected === null) {
-        let input1 = parseInt($("#input1").text());
-        let hasil = faktorial(input1);
-        $("#input1").text(hasil);
-        $("#hasil").text(hasil); // tampilkan hasil pada display
-    } else if (operasiSelected === null){
-        let input2 = parseInt($("#input2").text());
-        let hasil = faktorial(input2);
-        $("#input2").text(hasil);
-        $("#hasil").text(hasil); // tampilkan hasil pada display
-    }
-});
+
 
 });
