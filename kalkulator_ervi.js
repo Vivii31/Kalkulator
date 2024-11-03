@@ -66,7 +66,15 @@ $(function () {
     }
     $("#hasil").text(hasil);
     });
-    
+
+    // Fungsi faktorial
+    function faktorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * faktorial(n - 1);
+    }
+    }
     $(".tombol-faktorial").click(function () {
         if (operasiSelected === null) {
             let input1 = parseInt($("#input1").text());
