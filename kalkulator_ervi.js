@@ -61,14 +61,25 @@ $(function () {
           hasil = input1 ** input2;
         } else if (operasiSelected == "%") {
           hasil = input1 % input2;
-        } else if (operasiSelected == "!") {
-          hasil = faktorial (input1);
         } else {
         alert("Hello jquery kamu menekan angka ${operasiSelected}");
     }
     $("#hasil").text(hasil);
     });
-
+    
+    $(".tombol-faktorial").click(function () {
+        if (operasiSelected === null) {
+            let input1 = parseInt($("#input1").text());
+            let hasil = faktorial(input1);
+            $("#input1").text(hasil);
+            $("#hasil").text(hasil); // tampilkan hasil pada display
+        } else {
+            let input2 = parseInt($("#input2").text());
+            let hasil = faktorial(input2);
+            $("#input2").text(hasil);
+            $("#hasil").text(hasil); // tampilkan hasil pada display
+        }
+    });
 
 
 });
