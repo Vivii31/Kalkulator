@@ -61,29 +61,13 @@ $(function () {
           hasil = input1 ** input2;
         } else if (operasiSelected == "%") {
           hasil = input1 % input2;
+        } else if (operasiSelected == "!") {
+          hasil = input1 factorial;
         } else {
         alert("Hello jquery kamu menekan angka ${operasiSelected}");
     }
     $("#hasil").text(hasil);
     });
-// Fungsi faktorial
-function faktorial(n) {
-    if (n === 0 || n === 1) {
-        return 1;
-    } else {
-        return n * faktorial(n - 1);
-    }
-}
-
-$(".tombol-faktorial").click(function () {
-    if (operasiSelected === null) {
-        let input1 = parseInt($("#input1").text());
-        let hasil = faktorial(input1);
-        $("#input1").text(hasil);
-        $("#hasil").text(hasil); // tampilkan hasil pada display
-    }
-});
-
 
 
 
